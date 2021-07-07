@@ -28,6 +28,9 @@ jobs:
       - name: npm install
         run: npm install
       
+      - name: install lighthouse ci
+        run: npm install -g @lhci/cli
+      
       - name: npm run build
         run: npm run build
       
