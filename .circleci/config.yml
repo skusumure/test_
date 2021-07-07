@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:10.16-browsers
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build
+      # - run: yarn global add @lhci/cli@0.3.x
+      - run:
+          name: lhci autorun
+          command: lhci autorun
