@@ -27,7 +27,7 @@ jobs:
 
       - name: npm install
         run: npm install
-      
+
       - name: install lighthouse ci
         run: npm install -g @lhci/cli
       
@@ -35,4 +35,4 @@ jobs:
         run: npm run build
       
       - name: lhci autorun
-        command: lhci autorun
+        run: lhci autorun
