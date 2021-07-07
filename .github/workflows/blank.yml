@@ -26,10 +26,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: npm install
-        run: npm install
-
-      - name: install lighthouse ci
-        run: npm install @lhci/cli
+        run: |
+        npm install -g @lhci/cli
+        npm install
       
       - name: npm run build
         run: npm run build
